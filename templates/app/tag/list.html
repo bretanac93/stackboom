@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Tags{% endblock %}
+{% block body %}
+    {% if object_list %}
+        <ul>
+            {% for item in object_list %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h1>No hay tags aun!</h1>
+    {% endif %}
+{% endblock %}
