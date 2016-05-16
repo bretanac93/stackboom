@@ -13,6 +13,9 @@ class Tag(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return '/tags/%s' % (self.id)
+
 
 class Question(models.Model):
     title = models.CharField(max_length=255)
@@ -25,6 +28,8 @@ class Question(models.Model):
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return '/questions/%s' % (self.id)
 
 
 class Answer(models.Model):
@@ -37,6 +42,9 @@ class Answer(models.Model):
 
     def __str__(self):
         return self.content
+
+    def get_absolute_url(self):
+        return '/answers/%s' % (self.id)
 
 
 class Vote(models.Model):
@@ -51,3 +59,6 @@ class Vote(models.Model):
         else:
             res += "-1"
         return res
+
+    def get_absolute_url(self):
+        return '/votes/%s' % self.id

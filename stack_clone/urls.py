@@ -15,12 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from app.views import ListViewSet, CreationViewSet, UpdateViewSet, DeleteViewSet
+from app.views import ListViewSet, CreationViewSet, UpdateViewSet, DeleteViewSet, DetailsViewSet
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^questions/$', ListViewSet.QuestionList.as_view(), name='question-list'),
+    url(r'^questions/(?P<pk>[0-9]+)/$', DetailsViewSet.QuestionDetails.as_view(), name='question-details'),
     url(r'^questions/create', CreationViewSet.QuestionCreate.as_view(), name='question-create'),
     url(r'^questions/edit/(?P<pk>[0-9]+)/$', UpdateViewSet.QuestionUpdate.as_view(), name='question-edit'),
-    url(r'^question/delete/(?P<pk>[0-9]+)/$', DeleteViewSet.QuestionDelete.as_view(), name='question-delete')
+    url(r'^questions/delete/(?P<pk>[0-9]+)/$', DeleteViewSet.QuestionDelete.as_view(), name='question-delete'),
+    url(r'^questions/(?P<question_id>[0-9]+)/answer/$', 'app.views.create_answer', name='make-answer'),
+    url(r'^related_to/(?P<tag>[0-9]+)', 'app.views.related_to', name='related-to')
 ]
