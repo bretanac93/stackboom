@@ -25,7 +25,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Stack clone</a>
+                <a class="navbar-brand" href="#">Stack boom!!</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -39,8 +39,21 @@
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#register-modal" data-toggle="modal" data-target="#register-modal">Registrate</a></li>
-                    <li><a href="#login-modal" data-toggle="modal" data-target="#login-modal">Accede</a></li>
+                    {% if user.is_authenticated %}
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">{% if user.first_name %}Welcome {{ user.first_name }} {% else %}Welcome {{ user }} {% endif %}<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Perfil</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="{% url 'logout' %}">Logout</a></li>
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li><a href="#register-modal" data-toggle="modal" data-target="#register-modal">Registrate</a>
+                        </li>
+                        <li><a href="#login-modal" data-toggle="modal" data-target="#login-modal">Accede</a></li>
+                    {% endif %}
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -101,7 +114,8 @@
                             <input class="form-control" type="password" name="password" placeholder="Contraseña">
                         </div>
                         <div class="form-group">
-                            <input class="form-control" type="password" name="password2" placeholder="Repetir contraseña">
+                            <input class="form-control" type="password" name="password2"
+                                   placeholder="Repetir contraseña">
                         </div>
                         <div class="form-group">
                             <input class="btn btn-block btn-success" type="submit" value="Registrate">
