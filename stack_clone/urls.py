@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from app.views import ListViewSet, CreationViewSet, UpdateViewSet, DeleteViewSet, DetailsViewSet
+from stack_clone import settings
 
 urlpatterns = [
     url(r'^$', 'app.views.homepage', name="homepage"),
@@ -29,5 +30,8 @@ urlpatterns = [
     url(r'^related_to/(?P<tag>[0-9]+)', 'app.views.related_to', name='related-to'),
     url(r'^register/$', 'app.views.register', name="register"),
     url(r'^login/$', 'app.views.login', name='login'),
-    url(r'^logout/$', 'app.views.logout', name='logout')
+    url(r'^logout/$', 'app.views.logout', name='logout'),
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_URL}),
+    url(r'^about/$', 'app.views.about', name='about-us'),
+    url(r'^contact/$', 'app.views.contact', name='contact'),
 ]

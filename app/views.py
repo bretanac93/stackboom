@@ -112,3 +112,11 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return HttpResponseRedirect(reverse('homepage'))
+
+
+def about(request):
+    return render(request, 'app/default/about.html')
+
+
+def contact(request):
+    return render(request, 'app/default/contact.html')

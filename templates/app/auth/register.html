@@ -7,28 +7,5 @@
             <h5 style="color: red;">{{ error }}</h5>
         {% endfor %}
     </div>
-    <form action="" method="post">
-        {% csrf_token %}
-        <div class="field">
-            <input type="text" name="username" placeholder="Nombre de usuario">
-        </div>
-        <div class="field">
-            <input type="text" name="email" placeholder="Correo electronico">
-        </div>
-        <div class="field">
-            <input type="text" name="first_name" placeholder="Nombre">
-        </div>
-        <div class="field">
-            <input type="text" name="last_name" placeholder="Apellido(s)">
-        </div>
-        <div class="field">
-            <input type="password" name="password" placeholder="Contraseña">
-        </div>
-        <div class="field">
-            <input type="password" name="password2" placeholder="Repetir contraseña">
-        </div>
-        <div class="field">
-            <input type="submit" value="Registrate">
-        </div>
-    </form>
+
 {% endblock %}

@@ -1,15 +1,124 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Stack Clone - {% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     {% block level_styles %}
     {% endblock %}
 </head>
 <body>
+
+{% block nav %}
+    <nav class="navbar navbar-default navbar-inverse">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Stack clone</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="{% url 'homepage' %}">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li><a href="{% url 'question-list' %}">Preguntas</a></li>
+                    <li><a href="{% url 'about-us' %}">Acerca de</a></li>
+                    <li><a href="{% url 'contact' %}">Contactenos</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#register-modal" data-toggle="modal" data-target="#register-modal">Registrate</a></li>
+                    <li><a href="#login-modal" data-toggle="modal" data-target="#login-modal">Accede</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+{% endblock %}
+
+{% block modals %}
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="loginModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="loginModal">Login</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="{% url 'login' %}" method="post" id="login-form">
+                        {% csrf_token %}
+                        <div class="form-group center-block">
+                            <input class="form-control" type="text" name="username" placeholder="Nombre de usuario">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="password" name="password" placeholder="Contraseña">
+                        </div>
+                        <div class="form-group">
+                            <input class="btn btn-block btn-success" type="submit" value="Login">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="registerModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="registerModal">Register</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="{% url 'register' %}" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="username" placeholder="Nombre de usuario">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="email" placeholder="Correo electronico">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="first_name" placeholder="Nombre">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="last_name" placeholder="Apellido(s)">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="password" name="password" placeholder="Contraseña">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="password" name="password2" placeholder="Repetir contraseña">
+                        </div>
+                        <div class="form-group">
+                            <input class="btn btn-block btn-success" type="submit" value="Registrate">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
 {% block body %}
 {% endblock %}
 
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
 {% block level_scripts %}
 {% endblock %}
 </body>
