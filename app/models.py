@@ -17,7 +17,7 @@ class Tag(models.Model):
 class Question(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
-    due_date = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(User)
     updated_at = models.DateTimeField(auto_now=True)
     tags = models.ManyToManyField(Tag)

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Make a question{% endblock %}
+
+{% block body %}
+    {% if form.errors %}
+        <p style="color: red;">
+            Por favor corrige lo siguiente: </p>
+    {% endif %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="field">
+            {{ form.title.errors }}
+            <label for="id_title">Title:</label> {{ form.title }}
+        </div>
+        <div class="field">
+            {{ form.content.errors }}
+            <label for="id_content">Content:</label> {{ form.content }}
+        </div>
+        <div class="field">
+            {{ form.author.errors }}
+            <label for="id_author">Author:</label> {{ form.author }}
+        </div>
+        <div class="field">
+            {{ form.tags.errors }}
+            <label for="id_tags">Author:</label> {{ form.tags }}
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock %}
