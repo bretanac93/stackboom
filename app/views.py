@@ -1,9 +1,17 @@
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse_lazy, reverse
 from django.http.response import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, render_to_response
+from django.template import RequestContext
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from .forms import RegistrationForm
 
 from app.models import Question, Answer, Tag
+
+
+def homepage(request):
+    return render(request, 'app/default/index.html')
 
 
 class ListViewSet:
@@ -57,3 +65,27 @@ def related_to(request, tag):
     tag_res = get_object_or_404(Tag, pk=tag)
     res = tag_res.question_set.all()
     return render(request, 'app/question/related.html', {'questions': res, 'tag_name': tag_res})
+
+
+def register(request):
+    errors = []
+    if request.method == 'POST':
+        user = User()
+        user.username = request.POST['username']
+        user.email = request.POST['email']
+        user.first_name = request.POST['first_name']
+        user.last_name = request.POST['last_name']
+
+        password = request.POST['password']
+        password_confirmation = request.POST['password2']
+        if password == password_confirmation:
+            user.password = password
+            user.save()
+            return HttpResponseRedirect(reverse('homepage'))
+        else:
+            errors.append("The password didn't match")
+            return HttpResponseRedirect(reverse('register'))
+    else:
+        register_form = RegistrationForm()
+    return render(request, 'app/auth/register.html', {'form': register_form, 'errors': errors},
+                  context_instance=RequestContext(request))

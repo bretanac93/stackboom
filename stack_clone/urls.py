@@ -18,6 +18,7 @@ from django.contrib import admin
 from app.views import ListViewSet, CreationViewSet, UpdateViewSet, DeleteViewSet, DetailsViewSet
 
 urlpatterns = [
+    url(r'^$', 'app.views.homepage', name="homepage"),
     url(r'^admin/', admin.site.urls),
     url(r'^questions/$', ListViewSet.QuestionList.as_view(), name='question-list'),
     url(r'^questions/(?P<pk>[0-9]+)/$', DetailsViewSet.QuestionDetails.as_view(), name='question-details'),
@@ -25,5 +26,6 @@ urlpatterns = [
     url(r'^questions/edit/(?P<pk>[0-9]+)/$', UpdateViewSet.QuestionUpdate.as_view(), name='question-edit'),
     url(r'^questions/delete/(?P<pk>[0-9]+)/$', DeleteViewSet.QuestionDelete.as_view(), name='question-delete'),
     url(r'^questions/(?P<question_id>[0-9]+)/answer/$', 'app.views.create_answer', name='make-answer'),
-    url(r'^related_to/(?P<tag>[0-9]+)', 'app.views.related_to', name='related-to')
+    url(r'^related_to/(?P<tag>[0-9]+)', 'app.views.related_to', name='related-to'),
+    url(r'^register/$', 'app.views.register', name="register"),
 ]
