@@ -28,5 +28,6 @@ urlpatterns = [
     url(r'^questions/(?P<question_id>[0-9]+)/answer/$', 'app.views.create_answer', name='make-answer'),
     url(r'^related_to/(?P<tag>[0-9]+)', 'app.views.related_to', name='related-to'),
     url(r'^register/$', 'app.views.register', name="register"),
-    url(r'^login/$', 'app.views.login', name='login')
+    url(r'^login/$', 'app.views.login', name='login'),
+    url(r'^logout/$', 'app.views.logout', name='logout')
 ]

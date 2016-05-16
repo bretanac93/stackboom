@@ -107,3 +107,8 @@ def login(request):
             return render_to_response('app/auth/nouser.html')
     else:
         return render(request, 'app/auth/login.html')
+
+
+def logout(request):
+    auth.logout(request)
+    return HttpResponseRedirect(reverse('homepage'))
