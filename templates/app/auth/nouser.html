@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block title %}Cuenta inexistente{% endblock %}
+{% block body %}
+    <h1>Lo sentimos, pero no existe cuenta con los credenciales introducidos.</h1>
+    <p>Pruebe a registrarse en el sitio en la siguiente <a href="{% url 'register' %}">direccion</a></p>
+    <p>Disculpe las molestias ocasionadas.</p>
+{% endblock %}

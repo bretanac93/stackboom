@@ -1,3 +1,5 @@
+from django.contrib import auth
+from django.contrib.auth import authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse_lazy, reverse
@@ -79,13 +81,29 @@ def register(request):
         password = request.POST['password']
         password_confirmation = request.POST['password2']
         if password == password_confirmation:
-            user.password = password
+            user.set_password(password)
             user.save()
             return HttpResponseRedirect(reverse('homepage'))
         else:
             errors.append("The password didn't match")
             return HttpResponseRedirect(reverse('register'))
     else:
-        register_form = RegistrationForm()
-    return render(request, 'app/auth/register.html', {'form': register_form, 'errors': errors},
-                  context_instance=RequestContext(request))
+        return render(request, 'app/auth/register.html', {'errors': errors},
+                      context_instance=RequestContext(request))
+
+
+def login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        access = authenticate(username=username, password=password)
+        if access is not None:
+            if access.is_active:
+                auth.login(request, access)
+                return HttpResponseRedirect(reverse('homepage'))
+            else:
+                return render_to_response('app/auth/inactive.html')
+        else:
+            return render_to_response('app/auth/nouser.html')
+    else:
+        return render(request, 'app/auth/login.html')
