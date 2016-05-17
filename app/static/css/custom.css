@@ -1,6 +1,7 @@
 .navbar,
 .btn,
-.modal-content {
+.modal-content,
+.form-control {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -9,4 +10,12 @@
 }
 .navbar {
   margin-bottom: 0 !important;
+}
+.carousel-inner .item img {
+  max-width: 0 !important;
+  height: auto !important;
+}
+.avatar {
+  width: 200px;
+  height: 200px;
 }

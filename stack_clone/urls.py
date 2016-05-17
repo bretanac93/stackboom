@@ -34,4 +34,5 @@ urlpatterns = [
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_URL}),
     url(r'^about/$', 'app.views.about', name='about-us'),
     url(r'^contact/$', 'app.views.contact', name='contact'),
+    url(r'^profile/$', 'app.views.profile', name='profile')
 ]

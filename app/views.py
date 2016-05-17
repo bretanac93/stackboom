@@ -1,5 +1,6 @@
 from django.contrib import auth
 from django.contrib.auth import authenticate
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse_lazy, reverse
@@ -107,6 +108,18 @@ def login(request):
             return render_to_response('app/auth/nouser.html')
     else:
         return render(request, 'app/auth/login.html')
+
+@login_required
+def profile(request):
+    user = request.user
+    if request.method == "POST":
+        user.username = request.POST['username']
+        user.first_name = request.POST['first_name']
+        user.last_name = request.POST['last_name']
+        user.email = request.POST['email']
+        user.save()
+        return HttpResponseRedirect(reverse('profile'))
+    return render(request, 'app/auth/profile.html', {'user': user})
 
 
 def logout(request):

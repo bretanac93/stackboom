@@ -62,3 +62,8 @@ class Vote(models.Model):
 
     def get_absolute_url(self):
         return '/votes/%s' % self.id
+
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User)
+    avatar = models.ImageField()

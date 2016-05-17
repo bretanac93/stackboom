@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Perfil{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="page-header">Edita tu perfil</h1>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="text-center">
+                    <img src="{% static 'img/default-avatar.png' %}" class="avatar img-circle img-thumbnail"
+                         alt="Profile picture">
+                    <h6>Upload a different photo...</h6>
+                    <input type="file" class="text-center center-block well well-sm">
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+
+                <h3>Personal info</h3>
+                <form class="form-horizontal" action="" method="post" role="form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">First name:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" name="first_name" value="{{ user.first_name }}" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Last name:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" name="last_name" value="{{ user.last_name }}" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Email:</label>
+                        <div class="col-lg-8">
+                            <input class="form-control" name="email" value="{{ user.email }}" type="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Username:</label>
+                        <div class="col-md-8">
+                            <input class="form-control" name="username" value="{{ user.username }}" type="text">
+                        </div>
+                    </div>
+{#                    <div class="form-group">#}
+{#                        <label class="col-md-3 control-label">Password:</label>#}
+{#                        <div class="col-md-8">#}
+{#                            <input class="form-control" name="password" value="11111122333" type="password">#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="form-group">#}
+{#                        <label class="col-md-3 control-label">Confirm password:</label>#}
+{#                        <div class="col-md-8">#}
+{#                            <input class="form-control" password="password1" value="11111122333" type="password">#}
+{#                        </div>#}
+{#                    </div>#}
+                    <div class="form-group">
+                        <label class="col-md-3 control-label"></label>
+                        <div class="col-md-8">
+                            <input type="submit" class="btn btn-primary" value="Actualizar perfil">
+                            <span></span>
+                            <a href="#" class="btn btn-danger">Cambiar contraseña</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
