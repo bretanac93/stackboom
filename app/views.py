@@ -1,15 +1,12 @@
 from django.contrib import auth
 from django.contrib.auth import authenticate
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse_lazy, reverse
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render, render_to_response
 from django.template import RequestContext
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .forms import RegistrationForm
-
 from app.models import Question, Answer, Tag
 
 
@@ -109,6 +106,7 @@ def login(request):
     else:
         return render(request, 'app/auth/login.html')
 
+
 @login_required
 def profile(request):
     user = request.user
@@ -120,6 +118,15 @@ def profile(request):
         user.save()
         return HttpResponseRedirect(reverse('profile'))
     return render(request, 'app/auth/profile.html', {'user': user})
+
+
+def change_password(request):
+    user = request.user
+    password = request.POST['password']
+    password1 = request.POST['password1']
+    if password == password1:
+        user.set_password(password)
+        return HttpResponseRedirect(reverse('profile'))
 
 
 def logout(request):
