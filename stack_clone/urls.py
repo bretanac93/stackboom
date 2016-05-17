@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include,patterns
 from django.contrib import admin
 from app.views import ListViewSet, CreationViewSet, UpdateViewSet, DeleteViewSet, DetailsViewSet
 from stack_clone import settings
@@ -34,4 +34,6 @@ urlpatterns = [
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_URL}),
     url(r'^about/$', 'app.views.about', name='about-us'),
     url(r'^contact/$', 'app.views.contact', name='contact'),
+    url(r'^accounts/', include('allauth.urls')),
+     url(r'^admin/', include(admin.site.urls)),
 ]
