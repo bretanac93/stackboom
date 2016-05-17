@@ -1,0 +1,26 @@
+.main-content {
+  margin-top: 70px;
+}
+.question {
+  border: 1px solid #dedede;
+  background-color: #f3f3f3;
+}
+.author-picture {
+  margin-top: 23px;
+}
+.content {
+  margin-bottom: 20px;
+}
+.actions {
+  margin-top: 45px;
+  font-size: 1.5em;
+}
+.actions .downvote {
+  color: #f7977a;
+}
+.actions .favorite {
+  color: #c7d086;
+}
+.actions .upvote {
+  color: #82ca9d;
+}

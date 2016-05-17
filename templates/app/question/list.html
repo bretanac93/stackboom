@@ -1,24 +1,53 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block title %}Questions{% endblock %}
+{% block level_styles %}
+    <link rel="stylesheet" href="{% static 'modules/questions/list.css' %}">
+{% endblock %}
 {% block body %}
-    <a href="{% url 'question-create' %}">Make a question</a>
-    {% if questions %}
-        {% for item in questions %}
-            <article>
-                <h3>{{ item.title }}</h3>
-                <small>{{ item.author.username }}</small>
-                <small>{{ item.created_at }}</small>
-                <p>{{ item.content }}</p>
-                <ul>
-                    {% for tag in item.tags.all %}
-                        <li><a href="{% url 'related-to' tag.pk %}">{{ tag }}</a></li>
-                    {% endfor %}
-                </ul>
-            </article>
-            <a href="{% url 'question-edit' item.pk %}">Edit</a>
-            <a href="{% url 'question-delete' item.pk %}">Delete</a>
-        {% endfor %}
-    {% else %}
-        <h1>No hay preguntas</h1>
-    {% endif %}
+    {#    <a href="{% url 'question-create' %}">Make a question</a>#}
+    {#    {% if questions %}#}
+    {#        {% for item in questions %}#}
+    {#            <article>#}
+    {#                <h3>{{ item.title }}</h3>#}
+    {#                <small>{{ item.author.username }}</small>#}
+    {#                <small>{{ item.created_at }}</small>#}
+    {#                <p>{{ item.content }}</p>#}
+    {#                <ul>#}
+    {#                    {% for tag in item.tags.all %}#}
+    {#                        <li><a href="{% url 'related-to' tag.pk %}">{{ tag }}</a></li>#}
+    {#                    {% endfor %}#}
+    {#                </ul>#}
+    {#            </article>#}
+    {#            <a href="{% url 'question-edit' item.pk %}">Edit</a>#}
+    {#            <a href="{% url 'question-delete' item.pk %}">Delete</a>#}
+    {#        {% endfor %}#}
+    {#    {% else %}#}
+    {#        <h1>No hay preguntas</h1>#}
+    {#    {% endif %}#}
+
+    <div class="container">
+        <h1 class="page-header">Listado de preguntas</h1>
+        <div class="col-md-9">
+
+            <div class="question col-xs-12">
+                <div class="col-sm-2 author-picture">
+                    <img src="{% static 'img/default-avatar.png' %}" alt="Author"
+                         class="img-responsive img-circle img-thumbnail" style="height: 65px; width: 65px;">
+                </div>
+                <div class="col-sm-2 actions">
+                    <a href="#"><i class="glyphicon glyphicon-remove downvote"></i></a>
+                    <a href="#"><i class="glyphicon glyphicon-star-empty favorite"></i></a>
+                    <a href="#"><i class="glyphicon glyphicon-ok upvote"></i></a>
+                </div>
+                <div class="col-sm-8">
+                    <h2><a href="#">First question</a></h2>
+                    <p class="content">Lorem ipsum dolor sit amet fuckfuckfuck.Lorem ipsum dolor sit amet fuckfuckfuck.Lorem ipsum
+                        dolor sit amet fuckfuckfuck</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 {% endblock %}
