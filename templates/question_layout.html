@@ -2,7 +2,9 @@
 {% load staticfiles %}
 {% block title %}{{ question }}{% endblock %}
 {% block level_styles %}
+
     <link rel="stylesheet" href="{% static 'modules/questions/details.css' %}">
+    <link rel="stylesheet" href="{% static 'modules/questions/list.css' %}">
 {% endblock %}
 {% block body %}
     {#    <a href="{% url 'question-list' %}">Back to all questions</a>#}
@@ -26,11 +28,8 @@
 
     <section class="container main-content">
         <div class="row">
-
-            <div class="col-md-9">
-                {% block content %}
-                {% endblock %}
-            </div>
+            {% block content %}
+            {% endblock %}
             <aside class="col-md-3 sidebar">
                 <div class="widget widget_stats">
                     <h3 class="widget_title">Stats</h3>
@@ -90,7 +89,8 @@
                         <ul>
                             <li>
                                 <div class="img-author">
-                                    <img src="{% static 'img/default-avatar.png' %}" width="65" height="65" class="img-thumbnail img-circle img-responsive" alt="">
+                                    <img src="{% static 'img/default-avatar.png' %}" width="65" height="65"
+                                         class="img-thumbnail img-circle img-responsive" alt="">
                                 </div>
                                 <div class="details-author">
                                     <h6><a href="">nombre</a></h6>
@@ -99,7 +99,8 @@
                             </li>
                             <li>
                                 <div class="img-author">
-                                    <img src="{% static 'img/default-avatar.png' %}" width="65" height="65" class="img-thumbnail img-circle img-responsive" alt="">
+                                    <img src="{% static 'img/default-avatar.png' %}" width="65" height="65"
+                                         class="img-thumbnail img-circle img-responsive" alt="">
                                 </div>
                                 <div class="details-author">
                                     <h6><a href="">nombre</a></h6>
@@ -108,7 +109,8 @@
                             </li>
                             <li>
                                 <div class="img-author">
-                                    <img src="{% static 'img/default-avatar.png' %}" width="65" height="65" class="img-thumbnail img-circle img-responsive" alt="">
+                                    <img src="{% static 'img/default-avatar.png' %}" width="65" height="65"
+                                         class="img-thumbnail img-circle img-responsive" alt="">
                                 </div>
                                 <div class="details-author">
                                     <h6><a href="">nombre</a></h6>

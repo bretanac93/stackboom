@@ -1,227 +1,183 @@
-{% extends 'base.html' %}
+{% extends 'question_layout.html' %}
 {% load staticfiles %}
 {% block title %}Questions{% endblock %}
-{% block level_styles %}
-    <link rel="stylesheet" href="{% static 'modules/questions/list.css' %}">
-{% endblock %}
-{% block body %}
-    <section class="container">
-        <div class="row">
-            <div class="content-question col-md-9">
-                <header>
-                    <ul class="nav nav-tabs">
-                        <li role="presentation" class="active"><a href="#">Recent Question</a></li>
-                        <li role="presentation"><a href="#">Most Responses</a></li>
-                        <li role="presentation"><a href="#">Recently Answered</a></li>
-                        <li role="presentation"><a href="#">No answers</a></li>
-                    </ul>
-                </header>
 
-                <div class="row all-articles">
-                    <div class="each-article">
-                        <article class="col-xs-12 card-style">
-                            <aside class="col-md-3">
-                                <img src="{% static 'img/default-avatar.png' %}"
-                                     class="img-thumbnail img-circle img-responsive" width="85" height="85" alt="">
-                            </aside>
+{% block content %}
+    <div class="content-question col-md-9">
+        <header>
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="#">Recent Question</a></li>
+                <li role="presentation"><a href="#">Most Responses</a></li>
+                <li role="presentation"><a href="#">Recently Answered</a></li>
+                <li role="presentation"><a href="#">No answers</a></li>
+            </ul>
+        </header>
 
-                            <header class="col-md-9 header-article">
+        <div class="row all-articles">
+            <div class="each-article">
+                <article class="col-xs-12 card-style">
+                    <aside class="col-md-3">
+                        <img src="{% static 'img/default-avatar.png' %}"
+                             class="img-thumbnail img-circle img-responsive" width="85" height="85" alt="">
+                    </aside>
 
-                                <h2>Question Title</h2>
+                    <header class="col-md-9 header-article">
 
-                            </header>
+                        <h2>Question Title</h2>
 
-                            <div class="article-body col-xs-9">
-                                <p>
-                                    Duis dapibus aliquam mi, eget euismod sem scelerisque ut.
-                                    Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit
-                                    in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant
-                                    morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                                    Curabitur vitae velit in neque dictum blandit.
-                                </p>
-                            </div>
+                    </header>
 
-                            <footer class="row col-md-9 pull-right">
-                                <div class="col-sm-4 col-xs-12 tag">
-                                    <i class="glyphicon glyphicon-folder-close"></i> <a href="#">Python</a>
-                                </div>
-                                <div class="col-sm-4 col-xs-12 time-since">
-                                    <i class="glyphicon glyphicon-time"></i>
-                                    <p>4 mins ago</p>
-                                </div>
-                                <div class="col-sm-4 col-xs-12 num-answers">
-                                    <i class="glyphicon glyphicon-comment"></i>
-                                    <p>5 Answer</p>
-                                </div>
-
-                            </footer>
-
-
-                        </article>
+                    <div class="article-body col-xs-9">
+                        <p>
+                            Duis dapibus aliquam mi, eget euismod sem scelerisque ut.
+                            Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit
+                            in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant
+                            morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                            Curabitur vitae velit in neque dictum blandit.
+                        </p>
                     </div>
-                     <div class="each-article">
-                        <article class="col-xs-12 card-style">
-                            <aside class="col-md-3">
-                                <img src="{% static 'img/default-avatar.png' %}"
-                                     class="img-thumbnail img-circle img-responsive" width="85" height="85" alt="">
-                            </aside>
 
-                            <header class="col-md-9 header-article">
+                    <footer class="row col-md-9 pull-right">
+                        <div class="col-sm-4 col-xs-12 tag">
+                            <i class="glyphicon glyphicon-folder-close"></i> <a href="#">Python</a>
+                        </div>
+                        <div class="col-sm-4 col-xs-12 time-since">
+                            <i class="glyphicon glyphicon-time"></i>
+                            <p>4 mins ago</p>
+                        </div>
+                        <div class="col-sm-4 col-xs-12 num-answers">
+                            <i class="glyphicon glyphicon-comment"></i>
+                            <p>5 Answer</p>
+                        </div>
 
-                                <h2>Question Title</h2>
-
-                            </header>
-
-                            <div class="article-body col-xs-9">
-                                <p>
-                                    Duis dapibus aliquam mi, eget euismod sem scelerisque ut.
-                                    Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit
-                                    in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant
-                                    morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                                    Curabitur vitae velit in neque dictum blandit.
-                                </p>
-                            </div>
-
-                            <footer class="row col-md-9 pull-right">
-                                <div class="col-sm-4 col-xs-12 tag">
-                                    <i class="glyphicon glyphicon-folder-close"></i> <a href="#">Python</a>
-                                </div>
-                                <div class="col-sm-4 col-xs-12 time-since">
-                                    <i class="glyphicon glyphicon-time"></i>
-                                    <p>4 mins ago</p>
-                                </div>
-                                <div class="col-sm-4 col-xs-12 num-answers">
-                                    <i class="glyphicon glyphicon-comment"></i>
-                                    <p>5 Answer</p>
-                                </div>
-
-                            </footer>
+                    </footer>
 
 
-                        </article>
-                    </div>
-                     <div class="each-article">
-                        <article class="col-xs-12 card-style">
-                            <aside class="col-md-3">
-                                <img src="{% static 'img/default-avatar.png' %}"
-                                     class="img-thumbnail img-circle img-responsive" width="85" height="85" alt="">
-                            </aside>
-
-                            <header class="col-md-9 header-article">
-
-                                <h2>Question Title</h2>
-
-                            </header>
-
-                            <div class="article-body col-xs-9">
-                                <p>
-                                    Duis dapibus aliquam mi, eget euismod sem scelerisque ut.
-                                    Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit
-                                    in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant
-                                    morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                                    Curabitur vitae velit in neque dictum blandit.
-                                </p>
-                            </div>
-
-                            <footer class="row col-md-9 pull-right">
-                                <div class="col-sm-4 col-xs-12 tag">
-                                    <i class="glyphicon glyphicon-folder-close"></i> <a href="#">Python</a>
-                                </div>
-                                <div class="col-sm-4 col-xs-12 time-since">
-                                    <i class="glyphicon glyphicon-time"></i>
-                                    <p>4 mins ago</p>
-                                </div>
-                                <div class="col-sm-4 col-xs-12 num-answers">
-                                    <i class="glyphicon glyphicon-comment"></i>
-                                    <p>5 Answer</p>
-                                </div>
-
-                            </footer>
-
-
-                        </article>
-                    </div>
-                     <div class="each-article">
-                        <article class="col-xs-12 card-style">
-                            <aside class="col-md-3">
-                                <img src="{% static 'img/default-avatar.png' %}"
-                                     class="img-thumbnail img-circle img-responsive" width="85" height="85" alt="">
-                            </aside>
-
-                            <header class="col-md-9 header-article">
-
-                                <h2>Question Title</h2>
-
-                            </header>
-
-                            <div class="article-body col-xs-9">
-                                <p>
-                                    Duis dapibus aliquam mi, eget euismod sem scelerisque ut.
-                                    Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit
-                                    in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant
-                                    morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                                    Curabitur vitae velit in neque dictum blandit.
-                                </p>
-                            </div>
-
-                            <footer class="row col-md-9 pull-right">
-                                <div class="col-sm-4 col-xs-12 tag">
-                                    <i class="glyphicon glyphicon-folder-close"></i> <a href="#">Python</a>
-                                </div>
-                                <div class="col-sm-4 col-xs-12 time-since">
-                                    <i class="glyphicon glyphicon-time"></i>
-                                    <p>4 mins ago</p>
-                                </div>
-                                <div class="col-sm-4 col-xs-12 num-answers">
-                                    <i class="glyphicon glyphicon-comment"></i>
-                                    <p>5 Answer</p>
-                                </div>
-
-                            </footer>
-
-
-                        </article>
-                    </div>
-                </div>
-
+                </article>
             </div>
-            <aside class="sidebar col-md-3">
-                <section class="highest-points">
-                    <div class="highest-content card-style">
-                        <h3>Highest Points</h3>
-                        <ul>
-                            <li>
-                                <div class="img-author">
-                                    <img src="{% static 'img/default-avatar.png' %}" width="65" height="65" class="img-thumbnail img-circle img-responsive" alt="">
-                                </div>
-                                <div class="details-author">
-                                    <h6><a href="">nombre</a></h6>
-                                    <span>12 puntos</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="img-author">
-                                    <img src="{% static 'img/default-avatar.png' %}" width="65" height="65" class="img-thumbnail img-circle img-responsive" alt="">
-                                </div>
-                                <div class="details-author">
-                                    <h6><a href="">nombre</a></h6>
-                                    <span>12 puntos</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="img-author">
-                                    <img src="{% static 'img/default-avatar.png' %}" width="65" height="65" class="img-thumbnail img-circle img-responsive" alt="">
-                                </div>
-                                <div class="details-author">
-                                    <h6><a href="">nombre</a></h6>
-                                    <span>12 puntos</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </aside>
+            <div class="each-article">
+                <article class="col-xs-12 card-style">
+                    <aside class="col-md-3">
+                        <img src="{% static 'img/default-avatar.png' %}"
+                             class="img-thumbnail img-circle img-responsive" width="85" height="85" alt="">
+                    </aside>
 
+                    <header class="col-md-9 header-article">
+
+                        <h2>Question Title</h2>
+
+                    </header>
+
+                    <div class="article-body col-xs-9">
+                        <p>
+                            Duis dapibus aliquam mi, eget euismod sem scelerisque ut.
+                            Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit
+                            in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant
+                            morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                            Curabitur vitae velit in neque dictum blandit.
+                        </p>
+                    </div>
+
+                    <footer class="row col-md-9 pull-right">
+                        <div class="col-sm-4 col-xs-12 tag">
+                            <i class="glyphicon glyphicon-folder-close"></i> <a href="#">Python</a>
+                        </div>
+                        <div class="col-sm-4 col-xs-12 time-since">
+                            <i class="glyphicon glyphicon-time"></i>
+                            <p>4 mins ago</p>
+                        </div>
+                        <div class="col-sm-4 col-xs-12 num-answers">
+                            <i class="glyphicon glyphicon-comment"></i>
+                            <p>5 Answer</p>
+                        </div>
+
+                    </footer>
+
+
+                </article>
+            </div>
+            <div class="each-article">
+                <article class="col-xs-12 card-style">
+                    <aside class="col-md-3">
+                        <img src="{% static 'img/default-avatar.png' %}"
+                             class="img-thumbnail img-circle img-responsive" width="85" height="85" alt="">
+                    </aside>
+
+                    <header class="col-md-9 header-article">
+
+                        <h2>Question Title</h2>
+
+                    </header>
+
+                    <div class="article-body col-xs-9">
+                        <p>
+                            Duis dapibus aliquam mi, eget euismod sem scelerisque ut.
+                            Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit
+                            in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant
+                            morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                            Curabitur vitae velit in neque dictum blandit.
+                        </p>
+                    </div>
+
+                    <footer class="row col-md-9 pull-right">
+                        <div class="col-sm-4 col-xs-12 tag">
+                            <i class="glyphicon glyphicon-folder-close"></i> <a href="#">Python</a>
+                        </div>
+                        <div class="col-sm-4 col-xs-12 time-since">
+                            <i class="glyphicon glyphicon-time"></i>
+                            <p>4 mins ago</p>
+                        </div>
+                        <div class="col-sm-4 col-xs-12 num-answers">
+                            <i class="glyphicon glyphicon-comment"></i>
+                            <p>5 Answer</p>
+                        </div>
+
+                    </footer>
+
+
+                </article>
+            </div>
+            <div class="each-article">
+                <article class="col-xs-12 card-style">
+                    <aside class="col-md-3">
+                        <img src="{% static 'img/default-avatar.png' %}"
+                             class="img-thumbnail img-circle img-responsive" width="85" height="85" alt="">
+                    </aside>
+
+                    <header class="col-md-9 header-article">
+
+                        <h2>Question Title</h2>
+
+                    </header>
+
+                    <div class="article-body col-xs-9">
+                        <p>
+                            Duis dapibus aliquam mi, eget euismod sem scelerisque ut.
+                            Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit
+                            in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant
+                            morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                            Curabitur vitae velit in neque dictum blandit.
+                        </p>
+                    </div>
+
+                    <footer class="row col-md-9 pull-right">
+                        <div class="col-sm-4 col-xs-12 tag">
+                            <i class="glyphicon glyphicon-folder-close"></i> <a href="#">Python</a>
+                        </div>
+                        <div class="col-sm-4 col-xs-12 time-since">
+                            <i class="glyphicon glyphicon-time"></i>
+                            <p>4 mins ago</p>
+                        </div>
+                        <div class="col-sm-4 col-xs-12 num-answers">
+                            <i class="glyphicon glyphicon-comment"></i>
+                            <p>5 Answer</p>
+                        </div>
+
+                    </footer>
+
+                </article>
+            </div>
         </div>
-    </section>
+
+    </div>
 {% endblock %}

@@ -10,7 +10,7 @@ body {
   color: #474d5d;
 }
 .content-question {
-  margin-top: 70px;
+  margin-top: 20px;
 }
 .card-style {
   margin-bottom: 20px;
@@ -50,9 +50,6 @@ body {
 .all-articles .each-article footer .tag a {
   text-decoration: none;
   color: #333;
-}
-.sidebar {
-  margin-top: 70px;
 }
 .sidebar .highest-points .highest-content h3 {
   padding: 20px 0 10px;

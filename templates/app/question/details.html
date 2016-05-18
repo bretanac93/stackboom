@@ -1,203 +1,205 @@
 {% extends 'question_layout.html' %}
 {% load staticfiles %}
 {% block content %}
-    <article class="question single-question question-type-normal">
-        <h2>
-            <a href="single_question.html">This Is My first Question</a>
-        </h2>
-        <div class="question-inner">
-            <div class="clearfix"></div>
-            <div class="question-desc">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing gravida odio,
-                    sit amet suscipit risus ultrices eu. Fusce viverra neque at purus laoreet consequat.
-                    Vivamus vulputate posuere nisl quis consequat. Donec congue commodo mi, sed commodo
-                    velit fringilla ac. Fusce placerat venenatis mi. Pellentesque habitant morbi tristique
-                    senectus et netus et malesuada fames ac turpis egestas. Cras ornare, dolor a aliquet
-                    rutrum, dolor turpis condimentum leo, a semper lacus purus in felis. Quisque blandit
-                    posuere turpis, eget auctor felis pharetra eu .</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing gravida odio,
-                    sit amet suscipit risus ultrices eu. Fusce viverra neque at purus laoreet consequat.
-                    Vivamus vulputate posuere nisl quis consequat. Donec congue commodo mi, sed commodo
-                    velit fringilla ac. Fusce placerat venenatis mi. Pellentesque habitant morbi tristique
-                    senectus et netus et malesuada fames ac turpis egestas. Cras ornare, dolor a aliquet
-                    rutrum, dolor turpis condimentum leo, a semper lacus purus in felis. Quisque blandit
-                    posuere turpis, eget auctor felis pharetra eu .</p>
-            </div>
+    <div class="col-md-9">
+        <article class="question single-question question-type-normal">
+            <h2>
+                <a href="single_question.html">This Is My first Question</a>
+            </h2>
+            <div class="question-inner">
+                <div class="clearfix"></div>
+                <div class="question-desc">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing gravida odio,
+                        sit amet suscipit risus ultrices eu. Fusce viverra neque at purus laoreet consequat.
+                        Vivamus vulputate posuere nisl quis consequat. Donec congue commodo mi, sed commodo
+                        velit fringilla ac. Fusce placerat venenatis mi. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Cras ornare, dolor a aliquet
+                        rutrum, dolor turpis condimentum leo, a semper lacus purus in felis. Quisque blandit
+                        posuere turpis, eget auctor felis pharetra eu .</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi adipiscing gravida odio,
+                        sit amet suscipit risus ultrices eu. Fusce viverra neque at purus laoreet consequat.
+                        Vivamus vulputate posuere nisl quis consequat. Donec congue commodo mi, sed commodo
+                        velit fringilla ac. Fusce placerat venenatis mi. Pellentesque habitant morbi tristique
+                        senectus et netus et malesuada fames ac turpis egestas. Cras ornare, dolor a aliquet
+                        rutrum, dolor turpis condimentum leo, a semper lacus purus in felis. Quisque blandit
+                        posuere turpis, eget auctor felis pharetra eu .</p>
+                </div>
 
-            <footer>
-                <div class="category col-sm-3 col-xs-12">
+                <footer>
+                    <div class="category col-sm-3 col-xs-12">
                             <span class="question-category"><a href="#"><i class="glyphicon glyphicon-folder-close"></i>
                                 wordpress</a></span>
-                </div>
+                    </div>
 
-                <div class="date col-sm-3 col-xs-12">
-                    <span class="question-date"><i class="glyphicon glyphicon-time"></i> 4 mins ago</span>
-                </div>
-                <div class="answers col-sm-3 col-xs-12">
+                    <div class="date col-sm-3 col-xs-12">
+                        <span class="question-date"><i class="glyphicon glyphicon-time"></i> 4 mins ago</span>
+                    </div>
+                    <div class="answers col-sm-3 col-xs-12">
                             <span class="question-comment"><a href="#"><i class="glyphicon glyphicon-comment"></i> 5
                                 Answer</a></span>
-                </div>
-                <div class="votes col-sm-3 col-xs-12">
-                    <ul class="single-question-vote">
-                        <li><a href="#" class="single-question-vote-down" title="Dislike"><i
-                                class="glyphicon glyphicon-thumbs-down"></i></a></li>
-                        <li><span class="single-question-vote-result">+22</span></li>
-                        <li><a href="#" class="single-question-vote-up" title="Like"><i
-                                class="glyphicon glyphicon-thumbs-up"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </footer>
+                    </div>
+                    <div class="votes col-sm-3 col-xs-12">
+                        <ul class="single-question-vote">
+                            <li><a href="#" class="single-question-vote-down" title="Dislike"><i
+                                    class="glyphicon glyphicon-thumbs-down"></i></a></li>
+                            <li><span class="single-question-vote-result">+22</span></li>
+                            <li><a href="#" class="single-question-vote-up" title="Like"><i
+                                    class="glyphicon glyphicon-thumbs-up"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
+
+                <div class="clearfix"></div>
+            </div>
+        </article>
+
+        <div class="share-tags page-content">
+            <div class="question-tags"><i class="glyphicon glyphicon-tags"></i>
+                <a href="#">wordpress</a>, <a href="#">question</a>, <a href="#">developer</a>
+            </div>
 
             <div class="clearfix"></div>
-        </div>
-    </article>
+        </div><!-- End share-tags -->
 
-    <div class="share-tags page-content">
-        <div class="question-tags"><i class="glyphicon glyphicon-tags"></i>
-            <a href="#">wordpress</a>, <a href="#">question</a>, <a href="#">developer</a>
-        </div>
-
-        <div class="clearfix"></div>
-    </div><!-- End share-tags -->
-
-    <div class="about-author clearfix">
-        <div class="col-sm-2 author-image">
-            <a href="#" class="tooltip-n"><img alt="" class="img-responsive img-thumbnail img-circle"
-                                               src="{% static 'img/default-avatar.png' %}"></a>
-        </div>
-        <div class="col-sm-10 author-bio">
-            <h4>About the Author</h4>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra auctor neque. Nullam
-            lobortis, sapien vitae lobortis tristique.
-        </div>
-    </div><!-- End about-author -->
+        <div class="about-author clearfix">
+            <div class="col-sm-2 author-image">
+                <a href="#" class="tooltip-n"><img alt="" class="img-responsive img-thumbnail img-circle"
+                                                   src="{% static 'img/default-avatar.png' %}"></a>
+            </div>
+            <div class="col-sm-10 author-bio">
+                <h4>About the Author</h4>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra auctor neque. Nullam
+                lobortis, sapien vitae lobortis tristique.
+            </div>
+        </div><!-- End about-author -->
 
 
-    <div id="commentlist" class="page-content">
-        <div class="boxedtitle page-title"><h2>Answers ( <span class="color">5</span> )</h2></div>
-        <ul class="media-list comments">
-            <li class="media">
-                <a class="pull-left" href="#">
-                    <img class="media-object img-circle img-thumbnail"
-                         src="{% static 'img/default-avatar.png' %}" width="64"
-                         alt="Generic placeholder image">
-                </a>
-                <div class="media-body">
-                    <h5 class="media-heading pull-left hidden-xs">Some user</h5>
-                    <div class="comment-info pull-left">
-                        <div class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top"
-                             title="Sent from ***0.0.1"><i class="fa fa-user"></i></div>
-                        <div class="btn btn-primary btn-xs"><a class="fa fa-envelope white"
-                                                               href="mailto:loneswan@loneswan.net"></a>
+        <div id="commentlist" class="page-content">
+            <div class="boxedtitle page-title"><h2>Answers ( <span class="color">5</span> )</h2></div>
+            <ul class="media-list comments">
+                <li class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object img-circle img-thumbnail"
+                             src="{% static 'img/default-avatar.png' %}" width="64"
+                             alt="Generic placeholder image">
+                    </a>
+                    <div class="media-body">
+                        <h5 class="media-heading pull-left hidden-xs">Some user</h5>
+                        <div class="comment-info pull-left">
+                            <div class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top"
+                                 title="Sent from ***0.0.1"><i class="fa fa-user"></i></div>
+                            <div class="btn btn-primary btn-xs"><a class="fa fa-envelope white"
+                                                                   href="mailto:loneswan@loneswan.net"></a>
+                            </div>
+                            <div class="btn btn-default btn-xs"><i class="fa fa-clock-o"></i> Posted 3 weeks ago
+                            </div>
                         </div>
-                        <div class="btn btn-default btn-xs"><i class="fa fa-clock-o"></i> Posted 3 weeks ago
-                        </div>
+                        <br class="clearfix">
+                        <p class="well">This is really awesome snippet!</p>
                     </div>
-                    <br class="clearfix">
-                    <p class="well">This is really awesome snippet!</p>
-                </div>
-            </li>
-            <li class="media">
-                <a class="pull-left" href="#">
-                    <img class="media-object img-circle img-thumbnail"
-                         src="{% static 'img/default-avatar.png' %}" width="64"
-                         alt="Generic placeholder image">
-                </a>
-                <div class="media-body">
-                    <h5 class="media-heading pull-left hidden-xs">Some user</h5>
-                    <div class="comment-info pull-left">
-                        <div class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top"
-                             title="Sent from ***0.0.1"><i class="fa fa-user"></i></div>
-                        <div class="btn btn-primary btn-xs"><a class="fa fa-envelope white"
-                                                               href="mailto:loneswan@loneswan.net"></a>
+                </li>
+                <li class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object img-circle img-thumbnail"
+                             src="{% static 'img/default-avatar.png' %}" width="64"
+                             alt="Generic placeholder image">
+                    </a>
+                    <div class="media-body">
+                        <h5 class="media-heading pull-left hidden-xs">Some user</h5>
+                        <div class="comment-info pull-left">
+                            <div class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top"
+                                 title="Sent from ***0.0.1"><i class="fa fa-user"></i></div>
+                            <div class="btn btn-primary btn-xs"><a class="fa fa-envelope white"
+                                                                   href="mailto:loneswan@loneswan.net"></a>
+                            </div>
+                            <div class="btn btn-default btn-xs"><i class="fa fa-clock-o"></i> Posted 3 weeks ago
+                            </div>
                         </div>
-                        <div class="btn btn-default btn-xs"><i class="fa fa-clock-o"></i> Posted 3 weeks ago
-                        </div>
+                        <br class="clearfix">
+                        <p class="well">This is really awesome snippet!</p>
                     </div>
-                    <br class="clearfix">
-                    <p class="well">This is really awesome snippet!</p>
-                </div>
-            </li>
-            <li class="media">
-                <a class="pull-left" href="#">
-                    <img class="media-object img-circle img-thumbnail"
-                         src="{% static 'img/default-avatar.png' %}" width="64"
-                         alt="Generic placeholder image">
-                </a>
-                <div class="media-body">
-                    <h5 class="media-heading pull-left hidden-xs">Some user</h5>
-                    <div class="comment-info pull-left">
-                        <div class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top"
-                             title="Sent from ***0.0.1"><i class="fa fa-user"></i></div>
-                        <div class="btn btn-primary btn-xs"><a class="fa fa-envelope white"
-                                                               href="mailto:loneswan@loneswan.net"></a>
+                </li>
+                <li class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object img-circle img-thumbnail"
+                             src="{% static 'img/default-avatar.png' %}" width="64"
+                             alt="Generic placeholder image">
+                    </a>
+                    <div class="media-body">
+                        <h5 class="media-heading pull-left hidden-xs">Some user</h5>
+                        <div class="comment-info pull-left">
+                            <div class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top"
+                                 title="Sent from ***0.0.1"><i class="fa fa-user"></i></div>
+                            <div class="btn btn-primary btn-xs"><a class="fa fa-envelope white"
+                                                                   href="mailto:loneswan@loneswan.net"></a>
+                            </div>
+                            <div class="btn btn-default btn-xs"><i class="fa fa-clock-o"></i> Posted 3 weeks ago
+                            </div>
                         </div>
-                        <div class="btn btn-default btn-xs"><i class="fa fa-clock-o"></i> Posted 3 weeks ago
-                        </div>
+                        <br class="clearfix">
+                        <p class="well">This is really awesome snippet!</p>
                     </div>
-                    <br class="clearfix">
-                    <p class="well">This is really awesome snippet!</p>
-                </div>
-            </li>
-            <li class="media">
-                <a class="pull-left" href="#">
-                    <img class="media-object img-circle img-thumbnail"
-                         src="{% static 'img/default-avatar.png' %}" width="64"
-                         alt="Generic placeholder image">
-                </a>
-                <div class="media-body">
-                    <h5 class="media-heading pull-left hidden-xs">Some user</h5>
-                    <div class="comment-info pull-left">
-                        <div class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top"
-                             title="Sent from ***0.0.1"><i class="fa fa-user"></i></div>
-                        <div class="btn btn-primary btn-xs"><a class="fa fa-envelope white"
-                                                               href="mailto:loneswan@loneswan.net"></a>
+                </li>
+                <li class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object img-circle img-thumbnail"
+                             src="{% static 'img/default-avatar.png' %}" width="64"
+                             alt="Generic placeholder image">
+                    </a>
+                    <div class="media-body">
+                        <h5 class="media-heading pull-left hidden-xs">Some user</h5>
+                        <div class="comment-info pull-left">
+                            <div class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top"
+                                 title="Sent from ***0.0.1"><i class="fa fa-user"></i></div>
+                            <div class="btn btn-primary btn-xs"><a class="fa fa-envelope white"
+                                                                   href="mailto:loneswan@loneswan.net"></a>
+                            </div>
+                            <div class="btn btn-default btn-xs"><i class="fa fa-clock-o"></i> Posted 3 weeks ago
+                            </div>
                         </div>
-                        <div class="btn btn-default btn-xs"><i class="fa fa-clock-o"></i> Posted 3 weeks ago
-                        </div>
+                        <br class="clearfix">
+                        <p class="well">This is really awesome snippet!</p>
                     </div>
-                    <br class="clearfix">
-                    <p class="well">This is really awesome snippet!</p>
-                </div>
-            </li>
-            <li class="media">
-                <a class="pull-left" href="#">
-                    <img class="media-object img-circle img-thumbnail"
-                         src="{% static 'img/default-avatar.png' %}" width="64"
-                         alt="Generic placeholder image">
-                </a>
-                <div class="media-body">
-                    <h5 class="media-heading pull-left hidden-xs">Some user</h5>
-                    <div class="comment-info pull-left">
-                        <div class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top"
-                             title="Sent from ***0.0.1"><i class="fa fa-user"></i></div>
-                        <div class="btn btn-primary btn-xs"><a class="fa fa-envelope white"
-                                                               href="mailto:loneswan@loneswan.net"></a>
+                </li>
+                <li class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object img-circle img-thumbnail"
+                             src="{% static 'img/default-avatar.png' %}" width="64"
+                             alt="Generic placeholder image">
+                    </a>
+                    <div class="media-body">
+                        <h5 class="media-heading pull-left hidden-xs">Some user</h5>
+                        <div class="comment-info pull-left">
+                            <div class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top"
+                                 title="Sent from ***0.0.1"><i class="fa fa-user"></i></div>
+                            <div class="btn btn-primary btn-xs"><a class="fa fa-envelope white"
+                                                                   href="mailto:loneswan@loneswan.net"></a>
+                            </div>
+                            <div class="btn btn-default btn-xs"><i class="fa fa-clock-o"></i> Posted 3 weeks ago
+                            </div>
                         </div>
-                        <div class="btn btn-default btn-xs"><i class="fa fa-clock-o"></i> Posted 3 weeks ago
-                        </div>
+                        <br class="clearfix">
+                        <p class="well">This is really awesome snippet!</p>
                     </div>
-                    <br class="clearfix">
-                    <p class="well">This is really awesome snippet!</p>
-                </div>
-            </li>
-        </ul>
-    </div><!-- End page-content -->
+                </li>
+            </ul>
+        </div><!-- End page-content -->
 
-    <div id="respond" class="comment-respond page-content clearfix">
-        <div class="boxedtitle page-title"><h2>Leave a reply</h2></div>
-        <form action="" method="post" id="commentform" class="comment-form">
-            <div id="respond-textarea">
-                <p>
+        <div id="respond" class="comment-respond page-content clearfix">
+            <div class="boxedtitle page-title"><h2>Leave a reply</h2></div>
+            <form action="" method="post" id="commentform" class="comment-form">
+                <div id="respond-textarea">
+                    <p>
                                 <textarea class="form-control" id="comment" name="comment" aria-required="true"
                                           cols="58"
                                           rows="8"></textarea>
+                    </p>
+                </div>
+                <p class="form-submit">
+                    <input name="submit" class="btn btn-success" type="submit" id="submit" value="Post your answer">
                 </p>
-            </div>
-            <p class="form-submit">
-                <input name="submit" class="btn btn-success" type="submit" id="submit" value="Post your answer">
-            </p>
-        </form>
+            </form>
+        </div>
     </div>
 {% endblock %}
