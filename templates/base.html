@@ -7,6 +7,9 @@
     <title>Stack Clone - {% block title %}{% endblock %}</title>
 
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-social.css' %}">
+
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     {% block level_styles %}
     {% endblock %}
@@ -42,7 +45,9 @@
                     {% if user.is_authenticated %}
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-haspopup="true" aria-expanded="false">{% if user.first_name and user.last_name %}Bienvenido {{ user.first_name }} {{ user.last_name }} {% else %}Bienvenido {{ user }} {% endif %}<span class="caret"></span></a>
+                               aria-haspopup="true" aria-expanded="false">{% if user.first_name and user.last_name %}
+                                Bienvenido {{ user.first_name }} {{ user.last_name }} {% else %}Bienvenido
+                                {{ user }} {% endif %}<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="{% url 'profile' %}">Perfil</a></li>
                                 <li role="separator" class="divider"></li>
@@ -70,6 +75,28 @@
                     <h4 class="modal-title" id="loginModal">Login</h4>
                 </div>
                 <div class="modal-body">
+                    <div class="col-xs-12 social-buttons">
+                        <div class="col-md-6 fb">
+                            <a class="btn btn-block btn-social btn-facebook">
+                                <span class="fa fa-facebook"></span> Facebook
+                            </a>
+                        </div>
+                        <div class="col-md-6 tw">
+                            <a class="btn btn-block btn-social btn-twitter">
+                                <span class="fa fa-twitter"></span> Twitter
+                            </a>
+                        </div>
+                        <div class="col-md-6 gplus">
+                            <a class="btn btn-block btn-social btn-google">
+                                <span class="fa fa-google"></span> Google+
+                            </a>
+                        </div>
+                        <div class="col-md-6 github">
+                            <a class="btn btn-block btn-social btn-github">
+                                <span class="fa fa-github"></span> Github
+                            </a>
+                        </div>
+                    </div>
                     <form action="{% url 'login' %}" method="post" id="login-form">
                         {% csrf_token %}
                         <div class="form-group center-block">
@@ -93,10 +120,11 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="registerModal">Register</h4>
+                    <h4 class="modal-title" id="registerModal">Registrate con una cuenta local</h4>
                 </div>
                 <div class="modal-body">
-                    <form action="{% url 'register' %}" method="post">
+
+                    <form class="local-registration" action="{% url 'register' %}" method="post">
                         {% csrf_token %}
                         <div class="form-group">
                             <input class="form-control" type="text" name="username" placeholder="Nombre de usuario">

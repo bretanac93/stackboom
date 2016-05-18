@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}{{ question }}{% endblock %}
+{% block level_styles %}
+    <link rel="stylesheet" href="{% static 'modules/questions/details.css' %}">
+{% endblock %}
+{% block body %}
+    {#    <a href="{% url 'question-list' %}">Back to all questions</a>#}
+    {#    <h1>{{ question }}</h1>#}
+    {#    <p>{{ question.content }}</p>#}
+    {#    {% if question.answer_set %}#}
+    {#        <ul>#}
+    {#            {% for answer in question.answer_set.all %}#}
+    {#                <li>{{ answer }}</li>#}
+    {#            {% endfor %}#}
+    {#        </ul>#}
+    {#    {% else %}#}
+    {#        <h1>Sin respuestas o comentarios, prueba a ser el primero</h1>#}
+    {#    {% endif %}#}
+    {##}
+    {#    <form action="{% url 'make-answer' question.pk %}" method="POST">#}
+    {#        {% csrf_token %}#}
+    {#        <textarea name="content"></textarea>#}
+    {#        <input type="submit" value="Comment">#}
+    {#    </form>#}
+
+    <section class="container main-content">
+        <div class="row">
+
+            <div class="col-md-9">
+                {% block content %}
+                {% endblock %}
+            </div>
+            <aside class="col-md-3 sidebar">
+                <div class="widget widget_stats">
+                    <h3 class="widget_title">Stats</h3>
+                    <div class="ul_list ul_list-icon-ok">
+                        <ul>
+                            <li><i class="glyphicon glyphicon-question-sign"></i> Questions ( <span>20</span> )</li>
+                            <li><i class="glyphicon glyphicon-comment"></i> Answers ( <span>50</span> )</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="widget widget_social">
+                    <h3 class="widget_title">Find Us</h3>
+                    <ul>
+                        <li class="rss-subscribers">
+                            <a href="#" target="_blank">
+                                <strong>
+                                    <i class="fa fa-rss"></i>
+                                    <span>Subscribe</span><br>
+                                    <small>To RSS Feed</small>
+                                </strong>
+                            </a>
+                        </li>
+                        <li class="facebook-fans">
+                            <a href="#" target="_blank">
+                                <strong>
+                                    <i class="fa fa-facebook"></i>
+                                    <span>5,000</span><br>
+                                    <small>People like it</small>
+                                </strong>
+                            </a>
+                        </li>
+                        <li class="twitter-followers">
+                            <a href="#" target="_blank">
+                                <strong>
+                                    <i class="fa fa-twitter"></i>
+                                    <span>3,000</span><br>
+                                    <small>Followers</small>
+                                </strong>
+                            </a>
+                        </li>
+                        <li class="youtube-subs">
+                            <a href="#" target="_blank">
+                                <strong>
+                                    <i class="fa fa-youtube"></i>
+                                    <span>1,000</span><br>
+                                    <small>Subscribers</small>
+                                </strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="widget widget_tag_cloud">
+                    <h3 class="widget_title">Tags</h3>
+                    <a href="#">projects</a>
+                    <a href="#">Portfolio</a>
+                    <a href="#">Wordpress</a>
+                    <a href="#">Html</a>
+                    <a href="#">Css</a>
+                    <a href="#">jQuery</a>
+                    <a href="#">2code</a>
+                    <a href="#">vbegy</a>
+                </div>
+
+                <div class="widget">
+                    <h3 class="widget_title">Recent Questions</h3>
+                    <ul class="related-posts">
+                        <li class="related-item">
+                            <h3><a href="#">This is my first Question</a></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="clear"></div>
+                            <span>Feb 22, 2014</span>
+                        </li>
+                        <li class="related-item">
+                            <h3><a href="#">This Is My Second Poll Question</a></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="clear"></div>
+                            <span>Feb 22, 2014</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </aside><!-- End sidebar -->
+        </div>
+    </section>
+
+{% endblock %}
