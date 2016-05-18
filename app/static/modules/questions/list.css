@@ -1,26 +1,87 @@
-.main-content {
-  margin-top: 70px;
-}
-.question {
-  border: 1px solid #dedede;
+body {
   background-color: #f3f3f3;
 }
-.author-picture {
-  margin-top: 23px;
+.nav li a {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  color: #474d5d;
 }
-.content {
+.content-question {
+  margin-top: 70px;
+}
+.card-style {
   margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 5px #dedede;
+  box-shadow: 0 0 5px #dedede;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #dedede;
 }
-.actions {
-  margin-top: 45px;
-  font-size: 1.5em;
+.all-articles {
+  margin-left: 1px;
+  margin-top: 30px;
 }
-.actions .downvote {
-  color: #f7977a;
+.all-articles .each-article {
+  width: 98%;
 }
-.actions .favorite {
-  color: #c7d086;
+.all-articles .each-article aside {
+  margin-top: 2%;
 }
-.actions .upvote {
-  color: #82ca9d;
+.all-articles .each-article header h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #474d5d;
+}
+.all-articles .each-article .article-body p {
+  padding-top: 13px;
+  padding-bottom: 20px;
+  font-size: 13px;
+  border-bottom: 1px solid #dedede;
+  color: #848991;
+}
+.all-articles .each-article footer p {
+  display: inline-block;
+}
+.all-articles .each-article footer .tag a {
+  text-decoration: none;
+  color: #333;
+}
+.sidebar {
+  margin-top: 70px;
+}
+.sidebar .highest-points .highest-content h3 {
+  padding: 20px 0 10px;
+  border-bottom: 2px solid #dedede;
+  margin: -20px 0 20px;
+  font-size: 16px;
+}
+.sidebar .highest-points .highest-content ul {
+  padding: 0;
+  list-style: none;
+}
+.sidebar .highest-points .highest-content ul a {
+  text-decoration: none;
+}
+.sidebar .highest-points .highest-content ul li {
+  margin-bottom: 40px;
+}
+.sidebar .highest-points .highest-content ul li .img-author {
+  float: left;
+  margin-right: 20px;
+}
+.sidebar .highest-points .highest-content ul li .details-author {
+  padding-top: 5px;
+}
+.sidebar .highest-points .highest-content ul li .details-author h6 {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 5px;
+}
+.sidebar .highest-points .highest-content ul li .details-author span {
+  font-size: 13px;
 }

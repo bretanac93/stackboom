@@ -5,49 +5,100 @@
     <link rel="stylesheet" href="{% static 'modules/questions/list.css' %}">
 {% endblock %}
 {% block body %}
-    {#    <a href="{% url 'question-create' %}">Make a question</a>#}
-    {#    {% if questions %}#}
-    {#        {% for item in questions %}#}
-    {#            <article>#}
-    {#                <h3>{{ item.title }}</h3>#}
-    {#                <small>{{ item.author.username }}</small>#}
-    {#                <small>{{ item.created_at }}</small>#}
-    {#                <p>{{ item.content }}</p>#}
-    {#                <ul>#}
-    {#                    {% for tag in item.tags.all %}#}
-    {#                        <li><a href="{% url 'related-to' tag.pk %}">{{ tag }}</a></li>#}
-    {#                    {% endfor %}#}
-    {#                </ul>#}
-    {#            </article>#}
-    {#            <a href="{% url 'question-edit' item.pk %}">Edit</a>#}
-    {#            <a href="{% url 'question-delete' item.pk %}">Delete</a>#}
-    {#        {% endfor %}#}
-    {#    {% else %}#}
-    {#        <h1>No hay preguntas</h1>#}
-    {#    {% endif %}#}
+    <section class="container">
+        <div class="row">
+            <div class="content-question col-md-9">
+                <header>
+                    <ul class="nav nav-tabs">
+                        <li role="presentation" class="active"><a href="#">Recent Question</a></li>
+                        <li role="presentation"><a href="#">Most Responses</a></li>
+                        <li role="presentation"><a href="#">Recently Answered</a></li>
+                        <li role="presentation"><a href="#">No answers</a></li>
+                    </ul>
+                </header>
 
-    <div class="container">
-        <h1 class="page-header">Listado de preguntas</h1>
-        <div class="col-md-9">
+                <div class="row all-articles">
+                    <div class="each-article">
+                        <article class="col-xs-12 card-style">
+                            <aside class="col-md-3">
+                                <img src="{% static 'img/default-avatar.png' %}"
+                                     class="img-thumbnail img-circle img-responsive" width="85" height="85" alt="">
+                            </aside>
 
-            <div class="question col-xs-12">
-                <div class="col-sm-2 author-picture">
-                    <img src="{% static 'img/default-avatar.png' %}" alt="Author"
-                         class="img-responsive img-circle img-thumbnail" style="height: 65px; width: 65px;">
-                </div>
-                <div class="col-sm-2 actions">
-                    <a href="#"><i class="glyphicon glyphicon-remove downvote"></i></a>
-                    <a href="#"><i class="glyphicon glyphicon-star-empty favorite"></i></a>
-                    <a href="#"><i class="glyphicon glyphicon-ok upvote"></i></a>
-                </div>
-                <div class="col-sm-8">
-                    <h2><a href="#">First question</a></h2>
-                    <p class="content">Lorem ipsum dolor sit amet fuckfuckfuck.Lorem ipsum dolor sit amet fuckfuckfuck.Lorem ipsum
-                        dolor sit amet fuckfuckfuck</p>
+                            <header class="col-md-9 header-article">
+
+                                <h2>Question Title</h2>
+
+                            </header>
+
+                            <div class="article-body col-xs-9">
+                                <p>
+                                    Duis dapibus aliquam mi, eget euismod sem scelerisque ut.
+                                    Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit
+                                    in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant
+                                    morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    Curabitur vitae velit in neque dictum blandit.
+                                </p>
+                            </div>
+
+                            <footer class="row col-md-9 pull-right">
+                                <div class="col-sm-4 col-xs-12 tag">
+                                    <i class="glyphicon glyphicon-folder-close"></i> <a href="#">Python</a>
+                                </div>
+                                <div class="col-sm-4 col-xs-12 time-since">
+                                    <i class="glyphicon glyphicon-time"></i>
+                                    <p>4 mins ago</p>
+                                </div>
+                                <div class="col-sm-4 col-xs-12 num-answers">
+                                    <i class="glyphicon glyphicon-comment"></i>
+                                    <p>5 Answer</p>
+                                </div>
+
+                            </footer>
+
+
+                        </article>
+                    </div>
                 </div>
 
             </div>
+            <aside class="sidebar col-md-3">
+                <section class="highest-points">
+                    <div class="highest-content card-style">
+                        <h3>Highest Points</h3>
+                        <ul>
+                            <li>
+                                <div class="img-author">
+                                    <img src="{% static 'img/default-avatar.png' %}" width="65" height="65" class="img-thumbnail img-circle img-responsive" alt="">
+                                </div>
+                                <div class="details-author">
+                                    <h6><a href="">nombre</a></h6>
+                                    <span>12 puntos</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img-author">
+                                    <img src="{% static 'img/default-avatar.png' %}" width="65" height="65" class="img-thumbnail img-circle img-responsive" alt="">
+                                </div>
+                                <div class="details-author">
+                                    <h6><a href="">nombre</a></h6>
+                                    <span>12 puntos</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="img-author">
+                                    <img src="{% static 'img/default-avatar.png' %}" width="65" height="65" class="img-thumbnail img-circle img-responsive" alt="">
+                                </div>
+                                <div class="details-author">
+                                    <h6><a href="">nombre</a></h6>
+                                    <span>12 puntos</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </aside>
 
         </div>
-    </div>
+    </section>
 {% endblock %}

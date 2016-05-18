@@ -1,21 +1,91 @@
-.main-content
+color_article = #dedede
+
+borderRadius(amount)
+  -webkit-border-radius amount
+  -moz-border-radius amount
+  -ms-border-radius amount
+  -o-border-radius amount
+  border-radius amount
+
+body
+  background-color #f3f3f3
+
+.nav
+  li
+    a
+      borderRadius(0)
+      color #474d5d
+
+.content-question
   margin-top 70px
 
-.question
-  border 1px solid #dedede
-  background-color #f3f3f3
-.author-picture
-  margin-top 23px
-
-.content
+.card-style
   margin-bottom 20px
+  padding 20px
+  background-color #FFF
+  -webkit-box-shadow 0 0 5px color_article
+  box-shadow 0 0 5px color_article
+  -webkit-box-sizing border-box
+  box-sizing border-box
+  border 1px solid color_article
 
-.actions
-  margin-top 45px
-  font-size 1.5em
-  .downvote
-    color #F7977A
-  .favorite
-    color #C7D086
-  .upvote
-    color #82CA9D
+.all-articles
+  margin-left 1px
+  margin-top 30px
+
+  .each-article
+    width 98%
+
+    aside
+      margin-top 2%
+    header
+      h2
+        font-size 22px
+        font-weight bold
+        color #474D5D
+
+    .article-body
+      p
+        padding-top 13px
+        padding-bottom 20px
+        font-size 13px
+        border-bottom 1px solid color_article
+        color #848991
+
+    footer
+      p
+        display inline-block
+      .tag
+        a
+          text-decoration none
+          color #333333
+
+//Rigth Side
+.sidebar
+  margin-top 70px
+
+  .highest-points
+    .highest-content
+      h3
+        padding 20px 0 10px
+        border-bottom 2px solid #dedede
+        margin -20px 0 20px
+        font-size 16px
+      ul
+        padding 0
+        list-style none
+        a
+          text-decoration none
+        li
+          margin-bottom 40px
+          .img-author
+            float left
+            margin-right 20px
+          .details-author
+            padding-top 5px
+            h6
+              font-weight bold
+              font-size 14px
+              margin 5px
+            span
+              font-size 13px
