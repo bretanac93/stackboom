@@ -1,0 +1,310 @@
+a {
+  -webkit-transition: color 0.1s linear, border 0.1s linear, opacity 0.1s linear, background-color 0.1s linear;
+  -moz-transition: color 0.1s linear, border 0.1s linear, opacity 0.1s linear, background-color 0.1s linear;
+  -o-transition: color 0.1s linear, border 0.1s linear, opacity 0.1s linear, background-color 0.1s linear;
+  transition: color 0.1s linear, border 0.1s linear, opacity 0.1s linear, background-color 0.1s linear;
+}
+a:hover {
+  color: #337ab7 !important;
+  text-decoration: none;
+}
+body {
+  background-color: #f3f3f3;
+}
+.container .row .col-md-9 {
+  overflow: hidden;
+  height: 100%;
+}
+.container .row .col-md-9 .single-question h2 {
+  margin-left: 20px;
+  font-size: 22px;
+}
+.container .row .col-md-9 .single-question h2 a {
+  color: #2f3239;
+}
+.single-question {
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #fff;
+}
+.single-question footer {
+  margin-left: 5px;
+}
+.question {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #dedede;
+  -webkit-box-shadow: 0 0 5px #dedede;
+  -moz-box-shadow: 0 0 5px #dedede;
+  box-shadow: 0 0 5px #dedede;
+  position: relative;
+  margin-bottom: 10px;
+}
+.question-desc {
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #dedede;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.question-category,
+.question-date,
+.question-comment,
+.single-question-vote {
+  font-size: 13px;
+}
+.question-category a,
+.question-date a,
+.question-comment a,
+.single-question-vote a {
+  color: #2f3239;
+}
+.votes ul li {
+  list-style: none;
+  display: inline-block;
+}
+a.single-question-vote-up:hover {
+  color: #5cb85c !important;
+}
+a.single-question-vote-down:hover {
+  color: #d9534f !important;
+}
+.share-tags {
+  position: relative;
+  margin-bottom: 30px;
+  overflow: initial;
+}
+.page-content,
+.about-author {
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 1px solid #dedede;
+  background: #fff;
+  -webkit-box-shadow: 0 0 5px #dedede;
+  -moz-box-shadow: 0 0 5px #dedede;
+  box-shadow: 0 0 5px #dedede;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+.question-tags {
+  color: #2f3239 !important;
+}
+.question-tags a {
+  text-decoration: none;
+  color: #2f3239;
+}
+.question-tags i {
+  margin-right: 5px;
+}
+p.well {
+  margin-top: 20px;
+}
+div.btn a {
+  text-decoration: none;
+  color: #fff;
+}
+.media-heading {
+  margin-top: 25px;
+  z-index: 100;
+}
+.comment-info {
+  margin-left: 6px;
+  margin-top: 21px;
+  z-index: 100;
+}
+.media-body p {
+  position: relative;
+  padding: 15px;
+  margin-top: 50px;
+}
+#respond textarea {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.sidebar {
+  margin-top: 20px;
+}
+.widget {
+  margin-bottom: 30px;
+  color: #2f3239;
+  padding: 20px;
+  border: 1px solid #dedede;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 5px #dedede;
+  -moz-box-shadow: 0 0 5px #dedede;
+  box-shadow: 0 0 5px #dedede;
+}
+.widget a {
+  color: #555;
+}
+.widget h3.widget_title {
+  margin: -20px 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 20px 0 10px;
+  border-bottom: 2px solid #dedede;
+  position: relative;
+}
+.widget ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.widget ul li:last-child {
+  margin-bottom: 0;
+}
+.widget .ul_list {
+  margin-bottom: 0;
+}
+.widget .ul_list ul {
+  margin-bottom: 0;
+}
+.widget.widget_stats li {
+  color: #2f3239;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #eaeaeb;
+  margin-bottom: 10px;
+  padding: 10px !important;
+}
+.widget.widget_social {
+  overflow: hidden;
+  height: 100%;
+}
+.widget.widget_social li {
+  line-height: 15px;
+  float: left;
+  width: 100%;
+  height: 75px;
+  padding: 0;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  transition: 0.4s linear;
+  margin-bottom: 10px;
+}
+.widget.widget_social li a {
+  display: block;
+}
+.widget.widget_social li a strong {
+  display: inline-block;
+  width: 100%;
+  height: 75px;
+  line-height: 24px;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 10px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  position: relative;
+}
+.widget.widget_social li a small {
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.widget.widget_social li i {
+  float: right;
+  font-size: 37.5px;
+  line-height: 75px;
+  margin: 0 10px;
+  width: 45px;
+  text-align: center;
+}
+.widget.widget_social li span {
+  padding: 13.5px 0 0 10px;
+  display: inline-block;
+}
+.widget.widget_social li.rss-subscribers a strong {
+  background-color: #faa33d;
+}
+.widget.widget_social li.facebook-fans a strong {
+  background-color: #5d82d1;
+}
+.widget.widget_social li.twitter-followers a strong {
+  background-color: #40bff5;
+}
+.widget.widget_social li.youtube-subs a strong {
+  background-color: #c4302b;
+}
+.widget_tag_cloud a {
+  color: #fff !important;
+  display: inline-block;
+  border: 1px solid #e2e2e2;
+  line-height: 20px;
+  margin: 0 0 5px 0 !important;
+  padding: 2px 10px;
+  font-size: 12px !important;
+  background-color: #2f3239;
+}
+.widget:last-child {
+  margin-bottom: 0;
+}
+.related-posts {
+  padding: 0 !important;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+.related-posts li {
+  margin-bottom: 10px;
+}
+.related-posts .related-item h3 {
+  padding-top: 2px;
+  font-size: 14px !important;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.related-posts .related-item p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #848991;
+  font-weight: normal;
+  line-height: 22px;
+}
+.related-posts .related-item span {
+  font-size: 12px;
+  color: #c5c4c4;
+}
+.highest-points .highest-content h3 {
+  padding: 20px 0 10px;
+  border-bottom: 2px solid #dedede;
+  margin: -20px 0 20px;
+  font-size: 16px;
+}
+.highest-points .highest-content ul {
+  padding: 0;
+  list-style: none;
+}
+.highest-points .highest-content ul a {
+  text-decoration: none;
+}
+.highest-points .highest-content ul li {
+  margin-bottom: 40px;
+}
+.highest-points .highest-content ul li .img-author {
+  float: left;
+  margin-right: 20px;
+}
+.highest-points .highest-content ul li .details-author {
+  padding-top: 5px;
+}
+.highest-points .highest-content ul li .details-author h6 {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 5px;
+}
+.highest-points .highest-content ul li .details-author span {
+  font-size: 13px;
+}
